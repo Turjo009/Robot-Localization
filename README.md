@@ -20,23 +20,23 @@ Output
 
 2D Input Format
 
-4 10                  >> the size of the map (rows by columns)
-XXXXXXXXXX          >> map ('X' denotes an obstacle; 'O' represents a traversable position)
-XOOOOOOXXX
-XOOOOOOXXX
-XXXXXXXXXX
-4                    >> the number of sensor observations
-1011                  >> the observed values (in order NSWE; '1' means obstacle)
-1010
-1000
-1100
-0.2                  >> sensor's error rate
+    4 10                  >> the size of the map (rows by columns)
+    XXXXXXXXXX          >> map ('X' denotes an obstacle; 'O' represents a traversable position)
+    XOOOOOOXXX
+    XOOOOOOXXX
+    XXXXXXXXXX
+    4                    >> the number of sensor observations
+    1011                  >> the observed values (in order NSWE; '1' means obstacle)
+    1010
+    1000
+    1100
+    0.2                  >> sensor's error rate
 
 Error Probability
 
 If (d_{it}) denotes the number of directions reporting erroneous values, then the probability that a robot at position (i) would receive a sensor reading (e_t) is:
-
-P(E_t = e_t | X_t = i) = (1 - ε)^(4 - d_{it}) * ε^(d_{it})
+    
+    P(E_t = e_t | X_t = i) = (1 - ε)^(4 - d_{it}) * ε^(d_{it})
 
 Viterbi Algorithm
 
